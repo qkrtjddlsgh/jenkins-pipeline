@@ -2,5 +2,5 @@ apiVersion: skaffold/v1beta13
 kind: Config
 build:
   artifacts:
-    - image: glgl2131/hello_world5
+    - image: glgl2131/hello_world
       context: .
