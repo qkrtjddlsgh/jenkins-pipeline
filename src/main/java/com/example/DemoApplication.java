@@ -11,7 +11,7 @@ public class DemoApplication {
 	
 	@RequestMapping("/")
 	String home() {		
-		return "1234567";
+		return "12124124124";
 	}
 	
 	public static void main(String[] args) {
