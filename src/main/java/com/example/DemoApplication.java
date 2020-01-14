@@ -11,7 +11,7 @@ public class DemoApplication {
 	
 	@RequestMapping("/")
 	String home() {		
-		return "가나다라마바사";
+		return "1234567";
 	}
 	
 	public static void main(String[] args) {
