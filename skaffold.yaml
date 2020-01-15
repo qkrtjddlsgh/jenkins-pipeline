@@ -7,4 +7,4 @@ build:
 deploy:
   kubectl:
     manifests:
-    - k8s-*
+    - https://raw.githubusercontent.com/qkrtjddlsgh/ansible_playbook/master/skaffold_deployment.yaml
