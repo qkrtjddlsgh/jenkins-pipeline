@@ -7,7 +7,7 @@ build:
 deploy:
   helm:
     releases:
-      - name: mortal-lambkin
-        chartPath: helm-chart-repo/hello-world
+      - name: hello-world
+        chartPath: /home/vagrant/git-helm/hello-world
         # values:
           # images: glgl2131/hello
