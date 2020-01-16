@@ -8,6 +8,6 @@ deploy:
   helm:
     releases:
       - name: seongho-test01
-        chartPath: /home/vagrant/git-helm/charts
+        chartPath: hello-world
         values:
           images: glgl2131/hello
