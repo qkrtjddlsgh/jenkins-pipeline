@@ -8,7 +8,6 @@ deploy:
   helm:
     releases:
       - name: mortal-lambkin
-        remote: true
         chartPath: helm-chart-repo/hello-world
         values:
           images: glgl2131/hello
