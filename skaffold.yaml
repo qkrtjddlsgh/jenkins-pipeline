@@ -7,7 +7,7 @@ build:
 deploy:
   helm:
     releases:
-      - name: hello-world
-        chartPath: helm-chart-repo
+      - name: mortal-lambkin
+        # chartPath: helm-chart-repo
         values:
           images: glgl2131/hello
