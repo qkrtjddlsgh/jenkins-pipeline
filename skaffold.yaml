@@ -8,6 +8,6 @@ deploy:
   helm:
     releases:
       - name: hello-world
-        chartPath: https://qkrtjddlsgh.github.io/helm-chart-repo/stable
+        chartPath: helm-chart-repo
         values:
           images: glgl2131/hello
