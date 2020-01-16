@@ -5,6 +5,10 @@ build:
     - image: glgl2131/hello
       context: .
 deploy:
-  kubectl:
-    manifests:
-    - https://raw.githubusercontent.com/qkrtjddlsgh/ansible_playbook/master/skaffold_deployment.yaml
+  helm:
+    releases:
+      - name: seongho-sample
+        remote: true
+        chartPath: helm-chart-repo/hello-world
+        values:
+          images: glgl2131/hello
