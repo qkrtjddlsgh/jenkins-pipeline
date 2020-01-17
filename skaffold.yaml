@@ -5,9 +5,6 @@ build:
     - image: glgl2131/hello
       context: .
 deploy:
-  helm:
-    releases:
-      - name: seongho-test01
-        chartPath: hello-world
-        # values:
-          # images: glgl2131/hello
+  kubectl:
+    manifests:
+    - https://raw.githubusercontent.com/qkrtjddlsgh/ansible_playbook/master/skaffold_deployment.yaml
