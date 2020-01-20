@@ -2,9 +2,13 @@ apiVersion: skaffold/v1beta13
 kind: Config
 build:
   artifacts:
-    - image: glgl2131/hello
+    - image: glgl2131/helm-test
       context: .
 deploy:
-  kubectl:
-    manifests:
-    - https://raw.githubusercontent.com/qkrtjddlsgh/ansible_playbook/master/skaffold_deployment.yaml
+  helm:
+    releases:
+      - name: seongho-helm-test
+        remote: true
+        chartPath: https://raw.githubusercontent.com/qkrtjddlsgh/helm-chart-repo/master/stable/
+        values:
+          images: glgl2131/helm-test
