@@ -9,6 +9,6 @@ deploy:
     releases:
       - name: seongho-helm-test
         remote: true
-        chartPath: https://raw.githubusercontent.com/qkrtjddlsgh/helm-chart-repo/master/stable/
+        chartPath: https://qkrtjddlsgh.github.io/helm-chart-repo/stable/hello-world-0.1.0.tgz
         values:
           images: glgl2131/helm-test
