@@ -12,10 +12,4 @@ deploy:
         chartPath: https://qkrtjddlsgh.github.io/helm-chart-repo/stable/hello-world-0.1.0.tgz
         values:
           images: glgl2131/helm-test
-profiles:
-- name: profile1
-  activation:
-    - kubeContext: gke_sunlit-apricot-177815_asia-northeast1-a_seongho-k8s-cluster
-- name: profile2
-  activation:
-    - kubeContext: kubernetes-admin@kubernetes
+  kubeContext: gke_sunlit-apricot-177815_asia-northeast1-a_seongho-k8s-cluster
