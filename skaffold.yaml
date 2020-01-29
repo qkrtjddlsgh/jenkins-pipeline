@@ -7,7 +7,7 @@ build:
 deploy:
   helm:
     releases:
-      - name: seongho-helm-test
+      - name: seongho-helm-test02
         remote: true
         chartPath: https://qkrtjddlsgh.github.io/helm-chart-repo/stable/hello-world-0.1.0.tgz
         values:
