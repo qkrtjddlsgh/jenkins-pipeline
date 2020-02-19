@@ -2,14 +2,16 @@ apiVersion: skaffold/v2alpha2
 kind: Config
 build:
   artifacts:
-    - image: glgl2131/helm-test
+    - image: git-repo.asia-northeast3-a.c.lguplus-toy-project.internal/sample
       context: .
 deploy:
   helm:
     releases:
-      - name: seongho-helm-test02
+      - name: seongho-helm
         remote: true
-        chartPath: https://qkrtjddlsgh.github.io/helm-chart-repo/stable/hello-world-0.1.0.tgz
+        chartPath: http://34.64.189.226:8080/charts/example-helm-0.1.0.tgz
         values:
-          images: glgl2131/helm-test
-  kubeContext: gke_sunlit-apricot-177815_asia-northeast1-a_seongho-k8s-cluster
+          images: git-repo.asia-northeast3-a.c.lguplus-toy-project.internal/sample
+    flags:
+      upgrade:
+        - --install
