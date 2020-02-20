@@ -2,7 +2,7 @@ apiVersion: skaffold/v2alpha2
 kind: Config
 build:
   tagPolicy:
-    gitCommit: {}
+    sha256: {}
   artifacts:
     - image: git-repo.asia-northeast3-a.c.lguplus-toy-project.internal/sample
       context: .
