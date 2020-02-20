@@ -4,8 +4,6 @@ build:
   artifacts:
     - image: git-repo.asia-northeast3-a.c.lguplus-toy-project.internal/sample
       context: .
-      docker:
-        noCache: True
 deploy:
   helm:
     releases:
