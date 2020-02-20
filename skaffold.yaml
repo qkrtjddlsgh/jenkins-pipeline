@@ -10,8 +10,6 @@ deploy:
       - name: seongho-helm
         remote: true
         chartPath: http://34.64.189.226:8080/charts/example-helm-0.1.0.tgz
-        values:
-          images: git-repo.asia-northeast3-a.c.lguplus-toy-project.internal/sample
     flags:
       upgrade:
         - --install
