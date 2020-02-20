@@ -5,7 +5,7 @@ build:
     - image: git-repo.asia-northeast3-a.c.lguplus-toy-project.internal/sample
       context: .
       docker:
-        dockerfile: .
+        dockerfile: ./Dockerfile
 deploy:
   helm:
     releases:
