@@ -11,7 +11,7 @@ public class DemoApplication {
 	
 	@RequestMapping("/")
 	String home() {		
-		return "CI/CD 데모 동영상";
+		return "소스 코드 커밋 -> 젠킨스 빌드 -> 스케폴드 배포";
 	}
 	
 	public static void main(String[] args) {
