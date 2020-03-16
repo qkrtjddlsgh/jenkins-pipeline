@@ -2,7 +2,7 @@ apiVersion: skaffold/v2alpha2
 kind: Config
 build:
   artifacts:
-    - image: git-repo.asia-northeast3-a.c.lguplus-toy-project.internal/k8s-sample
+    - image: lgcns.registry.com/k8s-sample
       context: .
       docker:
         dockerfile: ./Dockerfile
@@ -13,7 +13,7 @@ deploy:
         remote: true
         chartPath: http://34.64.230.85:8080/charts/example-helm-0.1.0.tgz
         values:
-          image: git-repo.asia-northeast3-a.c.lguplus-toy-project.internal/k8s-sample
+          image: lgcns.registry.com/k8s-sample
     flags:
       upgrade:
         - --install
