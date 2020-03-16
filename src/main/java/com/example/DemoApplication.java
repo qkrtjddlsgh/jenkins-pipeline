@@ -11,7 +11,7 @@ public class DemoApplication {
 	
 	@RequestMapping("/")
 	String home() {		
-		return "Hello Kubernetes CI/CD";
+		return "!!!";
 	}
 	
 	public static void main(String[] args) {
