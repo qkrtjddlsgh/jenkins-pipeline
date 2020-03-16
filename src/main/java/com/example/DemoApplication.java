@@ -11,7 +11,7 @@ public class DemoApplication {
 	
 	@RequestMapping("/")
 	String home() {		
-		return "CI/CD CI/CD";
+		return "CI/CD CI/CD CI/CD CI/CD";
 	}
 	
 	public static void main(String[] args) {
