@@ -2,7 +2,7 @@ kind: pipeline
 name: default
 
 steps:
-- name: build
+- name: build-01
   pull: if-not-exists
   image: maven:3-jdk-10
   commands:
