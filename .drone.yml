@@ -2,7 +2,7 @@ kind: pipeline
 name: default
 
 steps:
-- name: test
+- name: build
   image: maven:3-jdk-10
   commands:
   - mvn clean package tomcat:redeploy -P production -D maven.test.skip=true
