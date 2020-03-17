@@ -7,13 +7,13 @@ pipeline {
       }
     }
 
-    stage('getCredential') {
+    stage('get gcloud credential') {
       steps {
         echo 'gcloud container clusters get-credentials mpay-prd --region asia-northeast3 --project lguplus-toy-project'
       }
     }
     
-    stage('runSkaffold') {
+    stage('deploy') {
       steps {
         echo 'skaffold run --tag $BUILD_ID --cache-artifacts=false'
       }
