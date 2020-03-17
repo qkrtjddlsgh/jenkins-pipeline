@@ -1,9 +1,0 @@
-kind: pipeline
-name: default
-
-steps:
-- name: build-01
-  pull: if-not-exists
-  image: maven:3-jdk-10
-  commands:
-  - mvn clean package tomcat:redeploy -P production -D maven.test.skip=true
