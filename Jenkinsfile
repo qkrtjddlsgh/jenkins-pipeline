@@ -1,15 +1,21 @@
 pipeline {
   agent any
   stages {
-    stage('Step.01') {
+    stage('build') {
       steps {
-        sh 'echo "Hello World"'
+        sh 'mvn clean package tomcat:redeploy -P production -D maven.test.skip=true'
       }
     }
 
-    stage('Step.02') {
+    stage('getCredential') {
       steps {
-        echo 'Success'
+        echo 'gcloud container clusters get-credentials mpay-prd --region asia-northeast3 --project lguplus-toy-project'
+      }
+    }
+    
+    stage('runSkaffold') {
+      steps {
+        echo 'skaffold run --tag $BUILD_ID --cache-artifacts=false'
       }
     }
 
